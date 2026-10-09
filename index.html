@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Bit Foundry — Parent company of Gangsta AI and Ask Consensus</title>
+<meta name="description" content="Bit Foundry is a California software company — the parent company of Gangsta AI and Ask Consensus. Registered business, D-U-N-S 06-845-0007." />
+<link rel="canonical" href="https://bitfoundrylabs.com/" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Bit Foundry" />
+<meta property="og:description" content="Parent company of Gangsta AI and Ask Consensus. A California software company. D-U-N-S 06-845-0007." />
+<meta property="og:url" content="https://bitfoundrylabs.com/" />
+<meta name="theme-color" content="#0a0c12" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Bit Foundry",
+  "legalName": "Bit Foundry",
+  "url": "https://bitfoundrylabs.com",
+  "duns": "06-845-0007",
+  "foundingLocation": { "@type": "Place", "address": { "@type": "PostalAddress", "addressLocality": "Aliso Viejo", "addressRegion": "CA", "addressCountry": "US" } },
+  "founder": { "@type": "Person", "name": "Mark Jenkins" },
+  "sameAs": [ "https://gangstaai.org", "https://askconsensus.ai" ]
+}
+</script>
+<style>
+  :root{
+    --bg:#0a0c12; --bg2:#0e1119; --panel:#121724; --line:#1e2638;
+    --text:#e9edf6; --muted:#97a3bb; --dim:#6b7793;
+    --accent:#8a6bff; --accent2:#3fd0e3; --gold:#e3b873;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--text);
+    font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,Helvetica,Arial,sans-serif;
+    -webkit-font-smoothing:antialiased;overflow-x:hidden}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+  .accent{color:var(--accent)}
+  .accent2{color:var(--accent2)}
+
+  /* nav */
+  nav{position:sticky;top:0;z-index:50;background:rgba(10,12,18,.72);
+    backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+  .brand{font-weight:800;letter-spacing:-.02em;font-size:18px}
+  .brand .dot{color:var(--accent)}
+  .navlinks a{color:var(--muted);font-size:14px;margin-left:22px;transition:color .2s}
+  .navlinks a:hover{color:var(--text)}
+  @media(max-width:640px){.navlinks{display:none}}
+
+  /* hero */
+  header.hero{position:relative;padding:120px 0 90px;text-align:center;overflow:hidden}
+  .hero .glow{position:absolute;inset:0;z-index:0;background:
+    radial-gradient(540px 300px at 50% 18%, rgba(138,107,255,.22), transparent 70%),
+    radial-gradient(480px 300px at 78% 40%, rgba(63,208,227,.14), transparent 70%)}
+  .hero .wrap{position:relative;z-index:1}
+  .eyebrow{display:inline-block;font-size:12px;letter-spacing:.22em;text-transform:uppercase;
+    color:var(--accent2);border:1px solid var(--line);border-radius:999px;padding:6px 14px;margin-bottom:22px}
+  h1{font-size:clamp(40px,8vw,74px);line-height:1.02;letter-spacing:-.03em;font-weight:850}
+  h1 .sub{display:block;background:linear-gradient(100deg,var(--accent),var(--accent2));
+    -webkit-background-clip:text;background-clip:text;color:transparent}
+  .tag{margin-top:22px;font-size:clamp(16px,2.4vw,21px);color:var(--muted);max-width:620px;margin-left:auto;margin-right:auto}
+  .hero .cta{margin-top:34px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+  .btn{display:inline-flex;align-items:center;gap:8px;padding:12px 22px;border-radius:12px;
+    font-weight:700;font-size:15px;transition:transform .15s,box-shadow .2s}
+  .btn.primary{background:linear-gradient(100deg,var(--accent),#6b54e0);color:#fff;box-shadow:0 8px 30px rgba(138,107,255,.3)}
+  .btn.ghost{border:1px solid var(--line);color:var(--text)}
+  .btn:hover{transform:translateY(-2px)}
+
+  /* sections */
+  section{padding:84px 0;border-top:1px solid var(--line)}
+  .kicker{font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--accent2);font-weight:700}
+  h2{font-size:clamp(28px,4.4vw,40px);letter-spacing:-.02em;margin-top:10px;font-weight:820}
+  .lead{color:var(--muted);margin-top:12px;max-width:640px}
+
+  /* board */
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:44px}
+  @media(max-width:900px){.grid{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:600px){.grid{grid-template-columns:1fr}}
+  .card{background:linear-gradient(180deg,var(--panel),var(--bg2));border:1px solid var(--line);
+    border-radius:18px;padding:24px;transition:transform .25s,border-color .25s,box-shadow .25s;will-change:transform}
+  .card:hover{transform:translateY(-6px);border-color:#2c3650;box-shadow:0 18px 50px rgba(0,0,0,.45)}
+  .avatar{width:64px;height:64px;border-radius:14px;object-fit:cover;background:
+    linear-gradient(135deg,#1b2233,#273150);border:1px solid var(--line);display:block}
+  .card h3{font-size:19px;margin-top:16px;letter-spacing:-.01em}
+  .role{color:var(--accent2);font-size:13px;font-weight:700;margin-top:3px}
+  .bio{color:var(--muted);font-size:14px;margin-top:12px}
+  .cardlink{display:inline-flex;align-items:center;gap:6px;margin-top:16px;color:var(--accent);
+    font-size:13px;font-weight:700}
+  .cardlink svg{transition:transform .2s}
+  .card:hover .cardlink svg{transform:translate(3px,-3px)}
+
+  /* products */
+  .products{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:40px}
+  @media(max-width:700px){.products{grid-template-columns:1fr}}
+  .product{display:block;background:linear-gradient(180deg,var(--panel),var(--bg2));
+    border:1px solid var(--line);border-radius:18px;padding:28px;transition:transform .25s,border-color .25s}
+  .product:hover{transform:translateY(-5px);border-color:#2c3650}
+  .ptag{font-size:12px;color:var(--accent2);letter-spacing:.04em;font-weight:700}
+  .product h3{font-size:24px;margin-top:8px;letter-spacing:-.02em}
+  .product p{color:var(--muted);font-size:15px;margin-top:10px}
+
+  /* founder */
+  .founder{display:flex;gap:28px;align-items:flex-start;margin-top:36px;flex-wrap:wrap}
+  .founder img{width:92px;height:92px;border-radius:18px;object-fit:cover;border:1px solid var(--line);
+    background:linear-gradient(135deg,#1b2233,#273150)}
+  .founder .f-body{flex:1;min-width:260px}
+  .founder h3{font-size:22px;letter-spacing:-.01em}
+  .founder .role{margin-bottom:10px}
+  .founder .f-body p{color:var(--muted);font-size:15px}
+  .chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
+  .chip{font-size:12px;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:5px 11px;
+    display:inline-flex;align-items:center;gap:6px}
+
+  /* contact */
+  .contactrow{margin-top:28px;display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+  .mail{font-size:clamp(20px,3.2vw,30px);font-weight:800;letter-spacing:-.02em}
+
+  /* footer */
+  footer{border-top:1px solid var(--line);padding:46px 0;color:var(--dim);font-size:13px}
+  footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:center}
+  footer a{color:var(--muted)}
+  footer a:hover{color:var(--text)}
+  .duns{font-variant-numeric:tabular-nums}
+
+  /* GSAP reveal baseline (also safe without JS) */
+  .reveal{opacity:0;transform:translateY(26px)}
+  .no-js .reveal{opacity:1;transform:none}
+</style>
+</head>
+<body class="no-js">
+<script>document.body.classList.remove('no-js')</script>
+
+<nav>
+  <div class="wrap">
+    <div class="brand">Bit Foundry<span class="dot">.</span></div>
+    <div class="navlinks">
+      <a href="#board">Board</a>
+      <a href="#products">Products</a>
+      <a href="#founder">Founder</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="glow"></div>
+  <div class="wrap">
+    <span class="eyebrow reveal">California Software Company</span>
+    <h1 class="reveal">Bit Foundry<span class="sub">builds the AI you trust.</span></h1>
+    <p class="tag reveal">The company behind Gangsta AI and AskConsensus.</p>
+    <div class="cta reveal">
+      <a class="btn primary" href="#products">Our products</a>
+      <a class="btn ghost" href="#board">Board of Directors</a>
+    </div>
+  </div>
+</header>
+
+<!-- BOARD -->
+<section id="board">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="kicker">Governance</div>
+      <h2>Board of Directors</h2>
+      <p class="lead">Operators, scientists, physicians, and builders guiding Bit Foundry.</p>
+    </div>
+    <div class="grid">
+
+      <article class="card reveal">
+        <img class="avatar" src="assets/board/gregg-cunningham.jpg" alt="Gregg Cunningham" onerror="this.style.visibility='hidden'">
+        <h3>Gregg Cunningham</h3>
+        <div class="role">Board Member</div>
+        <p class="bio">Attorney. Former two-term Member, Pennsylvania House of Representatives. Founder &amp; Executive Director, Center for Bio-Ethical Reform. Vietnam veteran and retired Air Force Reserve colonel, with roughly a decade in military intelligence.</p>
+        <a class="cardlink" href="https://www.abortionno.org" target="_blank" rel="nofollow noopener">Visit <svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M17 7H9M17 7v8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      </article>
+
+      <article class="card reveal">
+        <img class="avatar" src="assets/board/niv-caviar.jpg" alt="Niv Caviar" onerror="this.style.visibility='hidden'">
+        <h3>Niv Caviar</h3>
+        <div class="role">Board Member</div>
+        <p class="bio">CEO, ProPedix (makers of Dryello). Former CEO, Suneva Medical. Former VP of Marketing, Allergan. MBA, Harvard Business School.</p>
+        <a class="cardlink" href="https://www.propedix.com" target="_blank" rel="nofollow noopener">Visit <svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M17 7H9M17 7v8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      </article>
+
+      <article class="card reveal">
+        <img class="avatar" src="assets/board/isak-bosman.jpg" alt="Isak Bosman" onerror="this.style.visibility='hidden'">
+        <h3>Isak Bosman</h3>
+        <div class="role">Board Member</div>
+        <p class="bio">Co-founder &amp; CTO, Indago Solutions. Chief AI Scientist, SensorOps. Former lecturer in AI and neural networks, UC Irvine.</p>
+        <a class="cardlink" href="https://www.indago.ai" target="_blank" rel="nofollow noopener">Visit <svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M17 7H9M17 7v8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      </article>
+
+      <article class="card reveal">
+        <img class="avatar" src="assets/board/rob-stickler.jpg" alt="Rob Stickler" onerror="this.style.visibility='hidden'">
+        <h3>Rob Stickler</h3>
+        <div class="role">Board Member</div>
+        <p class="bio">Agentic AI expert.</p>
+        <a class="cardlink" href="https://robstickler.com" target="_blank" rel="nofollow noopener">Visit <svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M17 7H9M17 7v8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      </article>
+
+      <article class="card reveal">
+        <img class="avatar" src="assets/board/jeannine-kofford.jpg" alt="Jeannine Kofford, MD" onerror="this.style.visibility='hidden'">
+        <h3>Jeannine Kofford, MD</h3>
+        <div class="role">Investor</div>
+        <p class="bio">Physician. Founder &amp; Medical Director, Riviera Laser Studios, Dana Point. National trainer in nonsurgical aesthetics.</p>
+        <a class="cardlink" href="https://rivieralaserstudio.net" target="_blank" rel="nofollow noopener">Visit <svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M17 7H9M17 7v8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      </article>
+
+      <article class="card reveal">
+        <img class="avatar" src="assets/board/jeremiah-jenkins.jpg" alt="Jeremiah Jenkins" onerror="this.style.visibility='hidden'">
+        <h3>Jeremiah Jenkins</h3>
+        <div class="role">Director of QA</div>
+        <p class="bio">AI Trainer, DataAnnotation.tech.</p>
+        <a class="cardlink" href="https://www.linkedin.com/" target="_blank" rel="nofollow noopener">LinkedIn <svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M17 7H9M17 7v8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCTS -->
+<section id="products">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="kicker">What we build</div>
+      <h2>Products</h2>
+    </div>
+    <div class="products">
+      <a class="product reveal" href="https://gangstaai.org" target="_blank" rel="noopener">
+        <div class="ptag">gangstaai.org</div>
+        <h3>Gangsta AI</h3>
+        <p>Compare 30+ leading AI models side by side from a single prompt — pick the best answer for the job.</p>
+      </a>
+      <a class="product reveal" href="https://askconsensus.ai" target="_blank" rel="noopener">
+        <div class="ptag">askconsensus.ai</div>
+        <h3>Ask Consensus</h3>
+        <p>Ask once. The world's most powerful AIs weigh in, then one adjudicates — one cross-checked verdict you can trust.</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOUNDER -->
+<section id="founder">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="kicker">Leadership</div>
+      <h2>Founder</h2>
+    </div>
+    <div class="founder reveal">
+      <img src="assets/mark-jenkins.jpg" alt="Mark Jenkins" onerror="this.style.visibility='hidden'">
+      <div class="f-body">
+        <h3>Mark Jenkins</h3>
+        <div class="role">Founder, Bit Foundry</div>
+        <p>Senior Software Engineer at Sony PlayStation. Lead Software Engineer at Verizon Networkfleet. Software Engineer at Quest Diagnostics.</p>
+        <div class="chips">
+          <span class="chip">Sony PlayStation</span>
+          <span class="chip">Verizon Networkfleet</span>
+          <span class="chip">Quest Diagnostics</span>
+        </div>
+        <a class="cardlink" href="https://www.linkedin.com/in/markejenkins" target="_blank" rel="nofollow noopener">LinkedIn <svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M17 7H9M17 7v8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="kicker">Get in touch</div>
+      <h2>Contact</h2>
+      <div class="contactrow">
+        <a class="mail accent" href="mailto:hello@bitfoundrylabs.com">hello@bitfoundrylabs.com</a>
+      </div>
+      <p class="lead" style="margin-top:14px">Support: <a class="accent2" href="mailto:support@bitfoundrylabs.com">support@bitfoundrylabs.com</a></p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>&copy; 2026 Bit Foundry — Aliso Viejo, California, USA</div>
+    <div>
+      <a href="https://gangstaai.org" rel="noopener">Gangsta AI</a> &nbsp;·&nbsp;
+      <a href="https://askconsensus.ai" rel="noopener">Ask Consensus</a> &nbsp;·&nbsp;
+      <span class="duns">D-U-N-S 06-845-0007</span>
+    </div>
+  </div>
+</footer>
+
+<!-- GSAP -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script>
+  (function(){
+    if(!window.gsap){ document.querySelectorAll('.reveal').forEach(function(el){el.style.opacity=1;el.style.transform='none';}); return; }
+    gsap.registerPlugin(ScrollTrigger);
+
+    // Hero: animate in on load, staggered
+    gsap.to('.hero .reveal', { opacity:1, y:0, duration:.9, ease:'power3.out', stagger:.12, delay:.15 });
+
+    // Each section's headings reveal on scroll
+    gsap.utils.toArray('section').forEach(function(sec){
+      var heads = sec.querySelectorAll(':scope > .wrap > .reveal');
+      if(heads.length){
+        gsap.to(heads, {
+          opacity:1, y:0, duration:.7, ease:'power3.out', stagger:.1,
+          scrollTrigger:{ trigger:sec, start:'top 80%' }
+        });
+      }
+    });
+
+    // Board cards: staggered entrance on scroll
+    gsap.to('#board .card', {
+      opacity:1, y:0, duration:.7, ease:'power3.out', stagger:.08,
+      scrollTrigger:{ trigger:'#board .grid', start:'top 82%' }
+    });
+
+    // Product cards
+    gsap.to('.product', {
+      opacity:1, y:0, duration:.7, ease:'power3.out', stagger:.12,
+      scrollTrigger:{ trigger:'.products', start:'top 85%' }
+    });
+
+    // Founder block
+    gsap.to('.founder.reveal', {
+      opacity:1, y:0, duration:.8, ease:'power3.out',
+      scrollTrigger:{ trigger:'.founder', start:'top 85%' }
+    });
+  })();
+</script>
+</body>
+</html>
