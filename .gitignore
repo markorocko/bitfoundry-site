@@ -1,3 +1,5 @@
 *.bak-*
 *.md
 README.md
+_*.png
+_*.jpg
