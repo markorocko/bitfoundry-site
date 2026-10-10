@@ -3,15 +3,15 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Products — Gangsta AI and Ask Consensus | Bit Foundry</title>
+<title>Products — Gangsta AI and Ask Consensus | Bit Foundry Labs</title>
 <meta name="description" content="How Gangsta AI and Ask Consensus are powerful, unique, and different — two AI products from Bit Foundry built on the world's most powerful models." />
 <meta name="keywords" content="Bit Foundry, Gangsta AI, Ask Consensus, AI company, California software company, multi-model AI, AI consensus" />
-<meta name="author" content="Bit Foundry" />
+<meta name="author" content="Bit Foundry Labs" />
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
 <link rel="canonical" href="https://bitfoundrylabs.com/products/" />
 <meta property="og:type" content="website" />
-<meta property="og:site_name" content="Bit Foundry" />
-<meta property="og:title" content="Products — Gangsta AI and Ask Consensus | Bit Foundry" />
+<meta property="og:site_name" content="Bit Foundry Labs" />
+<meta property="og:title" content="Products — Gangsta AI and Ask Consensus | Bit Foundry Labs" />
 <meta property="og:description" content="How Gangsta AI and Ask Consensus are powerful, unique, and different — two AI products from Bit Foundry built on the world's most powerful models." />
 <meta property="og:url" content="https://bitfoundrylabs.com/products/" />
 <meta property="og:locale" content="en_US" />
@@ -20,7 +20,7 @@
 <meta property="og:image:height" content="630" />
 <meta property="og:image:alt" content="Bit Foundry — the company behind Gangsta AI and Ask Consensus" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="Products — Gangsta AI and Ask Consensus | Bit Foundry" />
+<meta name="twitter:title" content="Products — Gangsta AI and Ask Consensus | Bit Foundry Labs" />
 <meta name="twitter:description" content="How Gangsta AI and Ask Consensus are powerful, unique, and different — two AI products from Bit Foundry built on the world's most powerful models." />
 <meta name="twitter:image" content="https://bitfoundrylabs.com/assets/og-image.png" />
 <meta name="theme-color" content="#05070d" />
@@ -36,29 +36,24 @@
     {
       "@type": "Organization",
       "@id": "https://bitfoundrylabs.com/#organization",
-      "name": "Bit Foundry",
+      "name": "Bit Foundry Labs",
       "legalName": "Bit Foundry",
-      "alternateName": "Bit Foundry Labs",
+      "alternateName": "Bit Foundry",
       "url": "https://bitfoundrylabs.com",
       "logo": "https://bitfoundrylabs.com/assets/og-image.png",
       "image": "https://bitfoundrylabs.com/assets/og-image.png",
-      "description": "California software company building AI you can trust. Parent company of Gangsta AI and Ask Consensus.",
+      "description": "Bit Foundry is the California software company behind Gangsta AI and Ask Consensus.",
       "duns": "06-845-0007",
-      "foundingDate": "2026",
-      "slogan": "Building AI you can actually trust.",
+      "slogan": "Independent AI products. Clearer answers.",
       "knowsAbout": ["Artificial Intelligence", "Large Language Models", "AI model comparison", "AI consensus", "Multi-model AI"],
-      "address": { "@type": "PostalAddress", "streetAddress": "34189 CA-1 #201", "addressLocality": "Dana Point", "addressRegion": "CA", "postalCode": "92629", "addressCountry": "US" },
-      "areaServed": "US",
-      "email": "hello@bitfoundrylabs.com",
-      "founder": { "@type": "Person", "name": "Mark Jenkins" },
-      "identifier": { "@type": "PropertyValue", "propertyID": "D-U-N-S", "value": "06-845-0007" },
-      "sameAs": [ "https://gangstaai.org", "https://askconsensus.ai", "https://www.linkedin.com/company/gangsta-ai", "https://www.linkedin.com/company/askconsensus" ]
+      "email": "support@askconsensus.ai",
+      "identifier": { "@type": "PropertyValue", "propertyID": "D-U-N-S", "value": "06-845-0007" }
     },
     {
       "@type": "WebSite",
       "@id": "https://bitfoundrylabs.com/#website",
       "url": "https://bitfoundrylabs.com",
-      "name": "Bit Foundry",
+      "name": "Bit Foundry Labs",
       "publisher": { "@id": "https://bitfoundrylabs.com/#organization" },
       "inLanguage": "en-US"
     }
@@ -88,7 +83,22 @@
   .brand .mark{width:20px;height:20px;border-radius:6px;background:linear-gradient(135deg,var(--accent),#4b5bd6)}
   .navlinks a{color:var(--muted);font-size:14px;font-weight:500;margin-left:26px;transition:color .2s}
   .navlinks a:hover{color:var(--text)}
-  @media(max-width:640px){.navlinks{display:none}}
+  /* mobile hamburger (pure CSS, no JS) — portrait iPhone showed no menu before */
+  .navtoggle{display:none}
+  .hamburger{display:none}
+  @media(max-width:640px){
+    .hamburger{display:flex;flex-direction:column;justify-content:center;align-items:center;gap:5px;
+      width:40px;height:40px;cursor:pointer;border:1px solid var(--line);border-radius:8px;flex:0 0 auto}
+    .hamburger span{display:block;width:18px;height:2px;background:var(--text);border-radius:2px;transition:.2s}
+    .navtoggle:checked ~ .hamburger span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+    .navtoggle:checked ~ .hamburger span:nth-child(2){opacity:0}
+    .navtoggle:checked ~ .hamburger span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+    .navlinks{position:absolute;top:64px;left:0;right:0;flex-direction:column;
+      background:rgba(8,9,13,.97);backdrop-filter:saturate(140%) blur(14px);
+      border-bottom:1px solid var(--line);padding:4px 24px 14px;display:none}
+    .navlinks a{margin:0;padding:13px 2px;font-size:16px;border-top:1px solid var(--line)}
+    .navtoggle:checked ~ .navlinks{display:flex}
+  }
 
   /* hero — editorial mission statement, not a sales pitch */
   header.hero{padding:140px 0 100px}
@@ -266,7 +276,9 @@
 
 <nav>
   <div class="wrap">
-    <a class="brand" href="/"><span class="mark"></span>Bit Foundry</a>
+    <a class="brand" href="/"><span class="mark"></span>Bit Foundry Labs</a>
+    <input type="checkbox" id="navtoggle" class="navtoggle" aria-label="Toggle menu">
+    <label for="navtoggle" class="hamburger" role="button" aria-label="Menu"><span></span><span></span><span></span></label>
     <div class="navlinks">
       <a href="/about/">About</a>
       <a href="/products/" class="active">Products</a>
@@ -291,11 +303,11 @@
     <div class="reveal prod-head">
       <div class="kicker">askconsensus.ai</div>
       <h2>Ask Consensus</h2>
-      <p class="lead">The research and decision tool. Ask once; get one answer you can trust.</p>
+      <p class="lead">Ask one question and review a synthesized response with model agreement and disagreement made visible.</p>
       <a class="btn" href="https://askconsensus.ai" target="_blank" rel="noopener">Visit Ask Consensus →</a>
     </div>
     <div class="prose reveal">
-      <p>Why pay for one AI when you can have every top model weigh in — and get a single answer you can trust? Ask Consensus sends your question to the world's leading AI models at once, cross-checks their answers, and delivers one clear verdict. Instead of wondering whether a single chatbot got it right, you see where the best models agree, where they disagree, and the conclusion you can actually act on.</p>
+      <p>Ask Consensus sends a question to multiple AI models and presents a synthesized response with areas of agreement and disagreement. The models can share blind spots, and their agreement does not guarantee accuracy. Check important claims against reliable sources before acting.</p>
     </div>
     <div class="feat-grid reveal">
       <div class="feat"><h4>Ask once</h4><p>Your question goes to multiple top AI models simultaneously.</p></div>
@@ -368,8 +380,8 @@
   <div class="wrap">
     <div class="foot-grid">
       <div class="foot-col foot-brand">
-        <div class="brand"><span class="mark"></span>Bit Foundry</div>
-        <p class="foot-tag">Building AI you can actually trust. The company behind Gangsta AI and Ask Consensus.</p>
+        <div class="brand"><span class="mark"></span>Bit Foundry Labs</div>
+        <p class="foot-tag">Bit Foundry Labs is the product studio of Bit Foundry, the company behind Gangsta AI and Ask Consensus.</p>
         <div class="foot-social">
           <a href="https://www.linkedin.com/company/gangsta-ai" target="_blank" rel="noopener" aria-label="Gangsta AI on LinkedIn">Gangsta AI <svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M17 7H9M17 7v8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
           <a href="https://www.linkedin.com/company/askconsensus" target="_blank" rel="noopener" aria-label="Ask Consensus on LinkedIn">Ask Consensus <svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M17 7H9M17 7v8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
@@ -390,14 +402,11 @@
       </div>
       <div class="foot-col">
         <h4>Get in Touch</h4>
-        <a href="mailto:hello@bitfoundrylabs.com">hello@bitfoundrylabs.com</a>
-        <p class="foot-addr">34189 CA-1 #201<br>Dana Point, CA 92629</p>
+        <a href="mailto:support@askconsensus.ai">support@askconsensus.ai</a>
       </div>
     </div>
     <div class="foot-bottom">
       <span>&copy; 2026 Bit Foundry</span>
-      <span class="sep">|</span>
-      <a href="mailto:admin@bitfoundrylabs.com">admin@bitfoundrylabs.com</a>
       <span class="sep">|</span>
       <a href="/privacy/">Privacy Policy</a>
       <span class="sep">|</span>

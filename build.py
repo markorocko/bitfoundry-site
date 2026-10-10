@@ -10,8 +10,7 @@ leading slash so paths work from any depth.
 import os
 
 SITE = "https://bitfoundrylabs.com"
-EMAIL = "hello@bitfoundrylabs.com"
-ADMIN = "admin@bitfoundrylabs.com"
+EMAIL = "support@askconsensus.ai"
 YEAR = 2026
 
 LINK_SVG = ('<svg width="13" height="13" viewBox="0 0 24 24" fill="none">'
@@ -31,11 +30,11 @@ def head(title, desc, path):
 <title>{title}</title>
 <meta name="description" content="{desc}" />
 <meta name="keywords" content="Bit Foundry, Gangsta AI, Ask Consensus, AI company, California software company, multi-model AI, AI consensus" />
-<meta name="author" content="Bit Foundry" />
+<meta name="author" content="Bit Foundry Labs" />
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
 <link rel="canonical" href="{canonical}" />
 <meta property="og:type" content="website" />
-<meta property="og:site_name" content="Bit Foundry" />
+<meta property="og:site_name" content="Bit Foundry Labs" />
 <meta property="og:title" content="{title}" />
 <meta property="og:description" content="{desc}" />
 <meta property="og:url" content="{canonical}" />
@@ -61,29 +60,24 @@ def head(title, desc, path):
     {{
       "@type": "Organization",
       "@id": "{SITE}/#organization",
-      "name": "Bit Foundry",
+      "name": "Bit Foundry Labs",
       "legalName": "Bit Foundry",
-      "alternateName": "Bit Foundry Labs",
+      "alternateName": "Bit Foundry",
       "url": "{SITE}",
       "logo": "{SITE}/assets/og-image.png",
       "image": "{SITE}/assets/og-image.png",
-      "description": "California software company building AI you can trust. Parent company of Gangsta AI and Ask Consensus.",
+      "description": "Bit Foundry is the California software company behind Gangsta AI and Ask Consensus.",
       "duns": "06-845-0007",
-      "foundingDate": "2026",
-      "slogan": "Building AI you can actually trust.",
+      "slogan": "Independent AI products. Clearer answers.",
       "knowsAbout": ["Artificial Intelligence", "Large Language Models", "AI model comparison", "AI consensus", "Multi-model AI"],
-      "address": {{ "@type": "PostalAddress", "streetAddress": "34189 CA-1 #201", "addressLocality": "Dana Point", "addressRegion": "CA", "postalCode": "92629", "addressCountry": "US" }},
-      "areaServed": "US",
       "email": "{EMAIL}",
-      "founder": {{ "@type": "Person", "name": "Mark Jenkins" }},
-      "identifier": {{ "@type": "PropertyValue", "propertyID": "D-U-N-S", "value": "06-845-0007" }},
-      "sameAs": [ "https://gangstaai.org", "https://askconsensus.ai", "https://www.linkedin.com/company/gangsta-ai", "https://www.linkedin.com/company/askconsensus" ]
+      "identifier": {{ "@type": "PropertyValue", "propertyID": "D-U-N-S", "value": "06-845-0007" }}
     }},
     {{
       "@type": "WebSite",
       "@id": "{SITE}/#website",
       "url": "{SITE}",
-      "name": "Bit Foundry",
+      "name": "Bit Foundry Labs",
       "publisher": {{ "@id": "{SITE}/#organization" }},
       "inLanguage": "en-US"
     }}
@@ -104,7 +98,7 @@ def nav(active):
     return f'''
 <nav>
   <div class="wrap">
-    <a class="brand" href="/"><span class="mark"></span>Bit Foundry</a>
+    <a class="brand" href="/"><span class="mark"></span>Bit Foundry Labs</a>
     <div class="navlinks">
       {a("/about/", "About", "about")}
       {a("/products/", "Products", "products")}
@@ -122,8 +116,8 @@ def footer():
   <div class="wrap">
     <div class="foot-grid">
       <div class="foot-col foot-brand">
-        <div class="brand"><span class="mark"></span>Bit Foundry</div>
-        <p class="foot-tag">Building AI you can actually trust. The company behind Gangsta AI and Ask Consensus.</p>
+        <div class="brand"><span class="mark"></span>Bit Foundry Labs</div>
+        <p class="foot-tag">Bit Foundry Labs is the product studio of Bit Foundry, the company behind Gangsta AI and Ask Consensus.</p>
         <div class="foot-social">
           <a href="https://www.linkedin.com/company/gangsta-ai" target="_blank" rel="noopener" aria-label="Gangsta AI on LinkedIn">Gangsta AI {LINK_SVG}</a>
           <a href="https://www.linkedin.com/company/askconsensus" target="_blank" rel="noopener" aria-label="Ask Consensus on LinkedIn">Ask Consensus {LINK_SVG}</a>
@@ -145,13 +139,10 @@ def footer():
       <div class="foot-col">
         <h4>Get in Touch</h4>
         <a href="mailto:{EMAIL}">{EMAIL}</a>
-        <p class="foot-addr">34189 CA-1 #201<br>Dana Point, CA 92629</p>
       </div>
     </div>
     <div class="foot-bottom">
       <span>&copy; {YEAR} Bit Foundry</span>
-      <span class="sep">|</span>
-      <a href="mailto:{ADMIN}">{ADMIN}</a>
       <span class="sep">|</span>
       <a href="/privacy/">Privacy Policy</a>
       <span class="sep">|</span>
@@ -252,18 +243,18 @@ def board_grid():
 HOME = f'''
 <header class="hero">
   <div class="wrap">
-    <div class="eyebrow reveal">About Bit Foundry</div>
-    <h1 class="reveal">Building AI you can actually trust.</h1>
+    <div class="eyebrow reveal">Bit Foundry Labs · California software company</div>
+    <h1 class="reveal">Independent AI products. Clearer answers.</h1>
     <div class="lede">
-      <p class="reveal">AI is reshaping how people find answers — but a single model, however powerful, is still one opinion that can be confidently wrong. <strong>We think the answer is consensus.</strong></p>
-      <p class="reveal">Bit Foundry is a California software company building the tools for this new era: products where the world's most powerful AI models work together — cross-checked, adjudicated, and accountable — so the answer you act on is one you can trust.</p>
-      <p class="reveal">We're the company behind <strong>Gangsta AI</strong> and <strong>Ask Consensus</strong>.</p>
+      <p class="reveal">AI models can produce useful answers—and confident mistakes. Comparing outputs can make differences easier to see.</p>
+      <p class="reveal"><strong>Bit Foundry Labs is the product studio of Bit Foundry, a California S corporation.</strong> We build tools that let people compare AI responses and inspect where models agree or disagree. Model agreement is not a guarantee that an answer is correct.</p>
+      <p class="reveal">Our products are <strong>Gangsta AI</strong> and <strong>Ask Consensus</strong>.</p>
     </div>
     <div class="stats reveal">
-      <div class="stat"><div class="n">2026</div><div class="l">Founded</div></div>
+      <div class="stat"><div class="n">CA</div><div class="l">S corporation</div></div>
       <div class="stat"><div class="n">2</div><div class="l">Products shipped</div></div>
-      <div class="stat"><div class="n">30+</div><div class="l">AI models integrated</div></div>
-      <div class="stat"><div class="n">CA</div><div class="l">Registered S-corp</div></div>
+      <div class="stat"><div class="n">AI</div><div class="l">Multi-model products</div></div>
+      <div class="stat"><div class="n">06-845-0007</div><div class="l">D-U-N-S number</div></div>
     </div>
   </div>
 </header>
@@ -272,8 +263,8 @@ HOME = f'''
   <div class="wrap">
     <div class="reveal">
       <div class="kicker">Our thesis</div>
-      <h2>An ensemble of elite models beats any single model — every time.</h2>
-      <p class="lead">It's true in machine learning, and it's true for the answers you rely on. Rather than betting a decision on one model's blind spot, we run the best models in parallel, surface where they agree and disagree, and let a top model adjudicate a single, sourced verdict. That principle runs through everything we build.</p>
+      <h2>Compare answers. See where they differ.</h2>
+      <p class="lead">Multiple model responses can reveal useful differences, but consensus can still be wrong. Our products are designed to help people inspect AI outputs and make their own judgments.</p>
     </div>
   </div>
 </section>
@@ -289,12 +280,12 @@ HOME = f'''
       <a class="product" href="/products/">
         <div class="ptag">askconsensus.ai</div>
         <h3>Ask Consensus</h3>
-        <p>Ask once. The world's most powerful AIs weigh in, then one adjudicates — one cross-checked verdict you can trust.</p>
+        <p>Ask a question and review a synthesized response alongside areas of agreement and disagreement. AI-generated answers can be incorrect; verify important claims.</p>
       </a>
       <a class="product" href="/products/">
         <div class="ptag">gangstaai.org</div>
         <h3>Gangsta AI</h3>
-        <p>Compare 30+ leading AI models side by side from a single prompt — pick the best answer for the job.</p>
+        <p>Compare responses from leading AI models side by side from one prompt, then decide which answer best fits your task.</p>
       </a>
     </div>
     <p class="lead reveal" style="margin-top:28px"><a class="textlink" href="/products/">See how they're different →</a></p>
@@ -308,7 +299,7 @@ ABOUT = f'''
     <div class="eyebrow reveal">About</div>
     <h1 class="reveal">The company behind the answer.</h1>
     <div class="lede">
-      <p class="reveal">Bit Foundry is a California software company (a registered S-corporation, D-U-N-S 06-845-0007) building AI you can actually trust. We believe the most reliable answer doesn't come from one model — it comes from <strong>consensus</strong> among the best.</p>
+      <p class="reveal">Bit Foundry is a California S corporation (D-U-N-S 06-845-0007). Bit Foundry Labs is its product studio, responsible for Gangsta AI and Ask Consensus. These products help users compare AI outputs; model agreement does not establish that a response is correct.</p>
     </div>
   </div>
 </header>
@@ -317,8 +308,8 @@ ABOUT = f'''
   <div class="wrap">
     <div class="reveal">
       <div class="kicker">Our thesis</div>
-      <h2>An ensemble of elite models beats any single model — every time.</h2>
-      <p class="lead">It's true in machine learning, and it's true for the answers you rely on. Rather than betting a decision on one model's blind spot, we run the best models in parallel, surface where they agree and disagree, and let a top model adjudicate a single, sourced verdict. That principle runs through everything we build.</p>
+      <h2>Compare answers. See where they differ.</h2>
+      <p class="lead">Multiple model responses can reveal useful differences, but consensus can still be wrong. Our products help people inspect AI outputs and make their own judgments.</p>
     </div>
   </div>
 </section>
@@ -365,11 +356,11 @@ PRODUCTS = f'''
     <div class="reveal prod-head">
       <div class="kicker">askconsensus.ai</div>
       <h2>Ask Consensus</h2>
-      <p class="lead">The research and decision tool. Ask once; get one answer you can trust.</p>
+      <p class="lead">Ask one question and review a synthesized response with model agreement and disagreement made visible.</p>
       <a class="btn" href="https://askconsensus.ai" target="_blank" rel="noopener">Visit Ask Consensus →</a>
     </div>
     <div class="prose reveal">
-      <p>Why pay for one AI when you can have every top model weigh in — and get a single answer you can trust? Ask Consensus sends your question to the world's leading AI models at once, cross-checks their answers, and delivers one clear verdict. Instead of wondering whether a single chatbot got it right, you see where the best models agree, where they disagree, and the conclusion you can actually act on.</p>
+      <p>Ask Consensus sends a question to multiple AI models and presents a synthesized response with areas of agreement and disagreement. The models can share blind spots, and their agreement does not guarantee accuracy. Check important claims against reliable sources before acting.</p>
     </div>
     <div class="feat-grid reveal">
       <div class="feat"><h4>Ask once</h4><p>Your question goes to multiple top AI models simultaneously.</p></div>
@@ -443,9 +434,9 @@ COMPANY = f'''
 <header class="hero hero-sm">
   <div class="wrap">
     <div class="eyebrow reveal">Company</div>
-    <h1 class="reveal">A real, registered company.</h1>
+    <h1 class="reveal">Company details.</h1>
     <div class="lede">
-      <p class="reveal">Bit Foundry is a California S-corporation and the legal entity behind Gangsta AI and Ask Consensus. Here are the details that make us a verifiable business.</p>
+      <p class="reveal">Bit Foundry is a California S corporation (D-U-N-S 06-845-0007) and the legal entity behind Gangsta AI and Ask Consensus. Bit Foundry Labs is its product studio.</p>
     </div>
   </div>
 </header>
@@ -462,14 +453,14 @@ COMPANY = f'''
           <div class="regsub">California S-corporation</div>
         </div>
         <div class="regitem">
-          <div class="reglabel">Registered address</div>
-          <div class="regvalue">34189 CA-1 #201</div>
-          <div class="regsub">Dana Point, CA 92629, USA</div>
+          <div class="reglabel">Products</div>
+          <div class="regvalue">Gangsta AI</div>
+          <div class="regsub">Ask Consensus</div>
         </div>
         <div class="regitem">
           <div class="reglabel">D-U-N-S number</div>
           <div class="regvalue duns">06-845-0007</div>
-          <div class="regsub">Dun &amp; Bradstreet verified</div>
+          <div class="regsub">Company identifier</div>
         </div>
       </div>
     </div>
@@ -496,7 +487,6 @@ CONTACT = f'''
       <div class="contactrow">
         <a class="mail" href="mailto:{EMAIL}">{EMAIL}</a>
       </div>
-      <p class="lead" style="margin-top:20px">Bit Foundry<br>34189 CA-1 #201, Dana Point, CA 92629, USA</p>
       <p class="lead" style="margin-top:14px">Find our products on LinkedIn:
         <a class="textlink" href="https://www.linkedin.com/company/gangsta-ai" target="_blank" rel="noopener">Gangsta AI</a> ·
         <a class="textlink" href="https://www.linkedin.com/company/askconsensus" target="_blank" rel="noopener">Ask Consensus</a>
@@ -511,7 +501,7 @@ def legal_page(kind):
         heading = "Privacy Policy"
         intro = "Bit Foundry operates Gangsta AI (gangstaai.org) and Ask Consensus (askconsensus.ai). This policy explains what we collect, how we use it, and your rights."
         sections = [
-            ("Who we are", "Bit Foundry, a California S-corporation (D-U-N-S 06-845-0007), 34189 CA-1 #201, Dana Point, CA 92629, USA, is the operator of the Gangsta AI and Ask Consensus services and the data controller for personal data described here. Contact: " + EMAIL + "."),
+            ("Who we are", "Bit Foundry, a California S corporation (D-U-N-S 06-845-0007), operates Gangsta AI and Ask Consensus. Contact: " + EMAIL + "."),
             ("Information we collect", "Account details you provide (such as email and sign-in method); your queries and the content you submit; usage data (features used, subscription tier, free-tier usage counts); device and session information; and payment status (card details are handled by our payment processor, not stored by us)."),
             ("How we use it", "To provide and operate the services; maintain your query history and account preferences; enforce usage limits based on your subscription tier; process subscription payments; monitor for abuse, fraud, and security threats; and comply with legal obligations."),
             ("Service providers", "We rely on reputable third-party processors to run the services, which may include cloud database and hosting providers, a payment processor (Stripe), email delivery, and AI model routing providers. Each processes data only to deliver its function."),
@@ -560,19 +550,19 @@ def legal_page(kind):
 
 # ===========================================================================
 PAGES = [
-    ("", "Bit Foundry — The company behind Gangsta AI and Ask Consensus",
-     "Bit Foundry is a California software company building AI you can trust — the parent company of Gangsta AI and Ask Consensus. D-U-N-S 06-845-0007.", "home", HOME),
-    ("about", "About — Bit Foundry",
-     "Bit Foundry is a California software company building AI you can trust. Meet the team and the thesis behind Gangsta AI and Ask Consensus.", "about", ABOUT),
-    ("products", "Products — Gangsta AI and Ask Consensus | Bit Foundry",
+    ("", "Bit Foundry Labs — The company behind Gangsta AI and Ask Consensus",
+     "Bit Foundry Labs builds Gangsta AI and Ask Consensus. Learn about the California company behind both AI products.", "home", HOME),
+    ("about", "About — Bit Foundry Labs",
+     "Bit Foundry Labs is the product studio of Bit Foundry, the company behind Gangsta AI and Ask Consensus.", "about", ABOUT),
+    ("products", "Products — Gangsta AI and Ask Consensus | Bit Foundry Labs",
      "How Gangsta AI and Ask Consensus are powerful, unique, and different — two AI products from Bit Foundry built on the world's most powerful models.", "products", PRODUCTS),
-    ("company", "Company — Bit Foundry",
+    ("company", "Company — Bit Foundry Labs",
      "Bit Foundry is a registered California S-corporation (D-U-N-S 06-845-0007), the company behind Gangsta AI and Ask Consensus.", "company", COMPANY),
-    ("contact", "Contact — Bit Foundry",
+    ("contact", "Contact — Bit Foundry Labs",
      "Get in touch with Bit Foundry, the company behind Gangsta AI and Ask Consensus.", "contact", CONTACT),
-    ("privacy", "Privacy Policy — Bit Foundry",
+    ("privacy", "Privacy Policy — Bit Foundry Labs",
      "Privacy Policy for Bit Foundry, operator of Gangsta AI and Ask Consensus.", None, legal_page("privacy")),
-    ("terms", "Terms of Use — Bit Foundry",
+    ("terms", "Terms of Use — Bit Foundry Labs",
      "Terms of Use for Bit Foundry, operator of Gangsta AI and Ask Consensus.", None, legal_page("terms")),
 ]
 
