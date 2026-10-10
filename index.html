@@ -122,15 +122,21 @@
   @media(max-width:860px){.grid{grid-template-columns:repeat(2,1fr)}}
   @media(max-width:560px){.grid{grid-template-columns:1fr}}
   .card{background:var(--panel);border:1px solid var(--line);
-    border-radius:16px;padding:26px;transition:border-color .25s,background .25s}
+    border-radius:16px;padding:26px;transition:border-color .25s,background .25s;
+    display:flex;flex-direction:column}
   .card:hover{border-color:#2a3146;background:#12151e}
-  .avatar{width:72px;height:72px;border-radius:50%;object-fit:cover;background:#161b28;
+  .avatar{width:72px;height:72px;border-radius:50%;object-fit:cover;object-position:center;background:#161b28;
     border:1px solid var(--line);display:block;filter:grayscale(.15)}
+  /* per-person face centering within the circle (owner-tuned) */
+  .avatar.shift-right{object-position:65% center}
+  .avatar.shift-left{object-position:35% center}
   .card h3{font-size:17px;margin-top:18px;font-weight:600;letter-spacing:-.01em}
   .role{color:var(--accent);font-size:13px;font-weight:500;margin-top:4px}
   .bio{color:var(--muted);font-size:14px;line-height:1.55;margin-top:13px}
-  .cardlinks{display:flex;gap:20px;flex-wrap:wrap}
-  .cardlinks .cardlink{margin-top:16px}
+  /* push the link row to the card bottom so all cards align (like Gregg's) */
+  .cardlinks{display:flex;gap:20px;flex-wrap:wrap;margin-top:auto;padding-top:16px}
+  .cardlinks .cardlink{margin-top:0}
+  .card > .cardlink{margin-top:auto;padding-top:16px}
   .cardlink{display:inline-flex;align-items:center;gap:6px;margin-top:16px;color:var(--muted);
     font-size:13px;font-weight:500;transition:color .2s}
   .card:hover .cardlink{color:var(--text)}
@@ -160,7 +166,7 @@
 
   /* contact */
   .contactrow{margin-top:30px}
-  .mail{font-size:clamp(20px,3vw,28px);font-weight:600;letter-spacing:-.02em;color:var(--text)}
+  .mail{font-size:clamp(15px,2vw,19px);font-weight:600;letter-spacing:-.02em;color:var(--text)}
   .mail:hover{color:var(--accent)}
 
   /* footer */
@@ -304,7 +310,7 @@
       </article>
 
       <article class="card reveal">
-        <img class="avatar" src="assets/board/niv-caviar.jpg" alt="Niv Caviar" onerror="this.src='https://ui-avatars.com/api/?name=Niv+Caviar&size=256&background=161b28&color=cbd5f5&bold=true'">
+        <img class="avatar shift-right" src="assets/board/niv-caviar.jpg" alt="Niv Caviar" onerror="this.src='https://ui-avatars.com/api/?name=Niv+Caviar&size=256&background=161b28&color=cbd5f5&bold=true'">
         <h3>Niv Caviar</h3>
         <div class="role">Board Member</div>
         <p class="bio">Life sciences CEO, CFO &amp; CBO across biopharma, biotech, medtech and health services. CEO, ProPedix. Former CEO, Suneva Medical. Former VP of Marketing, Allergan. Harvard MBA.</p>
@@ -312,7 +318,7 @@
       </article>
 
       <article class="card reveal">
-        <img class="avatar" src="assets/board/isak-bosman.jpg" alt="Isak Bosman" onerror="this.src='https://ui-avatars.com/api/?name=Isak+Bosman&size=256&background=161b28&color=cbd5f5&bold=true'">
+        <img class="avatar shift-right" src="assets/board/isak-bosman.jpg" alt="Isak Bosman" onerror="this.src='https://ui-avatars.com/api/?name=Isak+Bosman&size=256&background=161b28&color=cbd5f5&bold=true'">
         <h3>Isak Bosman</h3>
         <div class="role">Board Member</div>
         <p class="bio">Co-founder &amp; CTO, Indago Solutions. Chief AI Scientist, SensorOps. Former lecturer in AI and neural networks, UC Irvine.</p>
@@ -336,7 +342,7 @@
       </article>
 
       <article class="card reveal">
-        <img class="avatar" src="assets/board/jeremiah-jenkins.jpg" alt="Jeremiah Jenkins" onerror="this.src='https://ui-avatars.com/api/?name=Jeremiah+Jenkins&size=256&background=161b28&color=cbd5f5&bold=true'">
+        <img class="avatar shift-left" src="assets/board/jeremiah-jenkins.jpg" alt="Jeremiah Jenkins" onerror="this.src='https://ui-avatars.com/api/?name=Jeremiah+Jenkins&size=256&background=161b28&color=cbd5f5&bold=true'">
         <h3>Jeremiah Jenkins</h3>
         <div class="role">Director of QA</div>
         <p class="bio">AI Trainer, DataAnnotation.tech.</p>
