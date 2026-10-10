@@ -182,3 +182,12 @@
   .foot-bottom a{color:var(--muted)}
   .foot-bottom a:hover{color:var(--text)}
   .foot-bottom .sep{color:var(--line)}
+
+  /* app store feature (products page) */
+  .cta-row{display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-top:22px}
+  .cta-row .btn{margin-top:0}
+  .appstore{display:inline-flex;transition:transform .2s,filter .2s}
+  .appstore img{display:block;height:48px;width:auto}
+  .appstore:hover{transform:translateY(-1px);filter:brightness(1.08)}
+  .applink-meta{color:var(--muted);font-size:13px;margin-top:12px}
+  .applink-meta strong{color:var(--text)}

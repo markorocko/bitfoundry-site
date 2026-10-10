@@ -387,7 +387,13 @@ PRODUCTS = f'''
       <div class="kicker">gangstaai.org</div>
       <h2>Gangsta AI</h2>
       <p class="lead">The side-by-side arena. See 30+ models answer the same prompt — and pick your winner.</p>
-      <a class="btn" href="https://gangstaai.org" target="_blank" rel="noopener">Visit Gangsta AI →</a>
+      <div class="cta-row">
+        <a class="btn" href="https://gangstaai.org" target="_blank" rel="noopener">Visit Gangsta AI →</a>
+        <a class="appstore" href="https://apps.apple.com/us/app/gangsta-ai-compare-ai-models/id6761397502" target="_blank" rel="noopener" aria-label="Download Gangsta AI on the App Store">
+          <img src="/assets/app-store-badge.svg" alt="Download on the App Store" width="150" height="50">
+        </a>
+      </div>
+      <p class="applink-meta">Also on iPhone &amp; iPad — <strong>Free</strong> · 4.4&#9733; on the App Store</p>
     </div>
     <div class="prose reveal">
       <p>Gangsta AI puts 30+ leading AI models head-to-head on a single prompt. Type once and watch the top models — from every major provider — answer side by side, so you can compare their reasoning, tone, and accuracy in real time and choose the best response for the job. It's the fast, visual, playful way to explore what today's AI can do.</p>
