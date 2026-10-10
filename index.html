@@ -126,6 +126,14 @@
   footer a:hover{color:var(--text)}
   .duns{font-variant-numeric:tabular-nums}
 
+  /* company / registration */
+  .reginfo{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:40px}
+  @media(max-width:700px){.reginfo{grid-template-columns:1fr}}
+  .regitem{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:26px}
+  .reglabel{font-size:12px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--dim)}
+  .regvalue{font-size:19px;font-weight:600;letter-spacing:-.01em;margin-top:12px;color:var(--text)}
+  .regsub{color:var(--muted);font-size:14px;margin-top:6px}
+
   /* content is visible by default; GSAP sets the hidden start state only when it loads */
   .reveal{opacity:1;transform:none}
   .gsap-ready .reveal{opacity:0;transform:translateY(22px)}
@@ -140,6 +148,7 @@
       <a href="#story">About</a>
       <a href="#leadership">Leadership</a>
       <a href="#products">Products</a>
+      <a href="#company">Company</a>
       <a href="#contact">Contact</a>
     </div>
   </div>
@@ -286,21 +295,43 @@
       <div class="contactrow">
         <a class="mail" href="mailto:hello@bitfoundrylabs.com">hello@bitfoundrylabs.com</a>
       </div>
-      <p class="lead" style="margin-top:16px">Support: <a class="muted" style="text-decoration:underline" href="mailto:support@bitfoundrylabs.com">support@bitfoundrylabs.com</a></p>
+    </div>
+  </div>
+</section>
+
+<!-- COMPANY / REGISTRATION -->
+<section id="company">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="kicker">Company</div>
+      <h2>Registered business</h2>
+      <div class="reginfo">
+        <div class="regitem">
+          <div class="reglabel">Legal entity</div>
+          <div class="regvalue">Bit Foundry</div>
+          <div class="regsub">California S-corporation</div>
+        </div>
+        <div class="regitem">
+          <div class="reglabel">Registered address</div>
+          <div class="regvalue">34189 CA-1 #201</div>
+          <div class="regsub">Dana Point, CA 92629, USA</div>
+        </div>
+        <div class="regitem">
+          <div class="reglabel">D-U-N-S number</div>
+          <div class="regvalue duns">06-845-0007</div>
+          <div class="regsub">Dun &amp; Bradstreet verified</div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
 <footer>
   <div class="wrap">
-    <div>
-      &copy; 2026 Bit Foundry<br>
-      34189 CA-1 #201, Dana Point, CA 92629
-    </div>
+    <div>&copy; 2026 Bit Foundry</div>
     <div>
       <a href="https://gangstaai.org" rel="noopener">Gangsta AI</a> &nbsp;·&nbsp;
-      <a href="https://askconsensus.ai" rel="noopener">Ask Consensus</a> &nbsp;·&nbsp;
-      <span class="duns">D-U-N-S 06-845-0007</span>
+      <a href="https://askconsensus.ai" rel="noopener">Ask Consensus</a>
     </div>
   </div>
 </footer>
