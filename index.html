@@ -101,7 +101,10 @@
   }
 
   /* hero — editorial mission statement, not a sales pitch */
-  header.hero{padding:140px 0 100px}
+  header.hero{padding:120px 0 100px}
+  .hero-logo{display:block;width:min(440px,82vw);height:auto;margin:0 0 30px;mix-blend-mode:screen;pointer-events:none}
+  @media(prefers-reduced-motion:reduce){.hero-logo{display:none}.hero-logo-still{display:block;width:min(440px,82vw);height:auto;margin:0 0 30px}}
+  .hero-logo-still{display:none}
   .hero .eyebrow{font-size:13px;font-weight:500;color:var(--muted);margin-bottom:28px}
   .hero h1{font-size:clamp(34px,5.6vw,58px);line-height:1.08;letter-spacing:-.035em;font-weight:600;max-width:880px}
   .hero .lede{margin-top:34px;max-width:680px;font-size:clamp(17px,2.2vw,20px);line-height:1.6;color:var(--muted)}
@@ -290,7 +293,11 @@
 
 <header class="hero">
   <div class="wrap">
-    <div class="eyebrow reveal">Bit Foundry Labs · California software company</div>
+    <video class="hero-logo reveal" autoplay muted loop playsinline aria-label="Bit Foundry Labs" poster="/assets/brand/bit-foundry-logo-poster.jpg">
+      <source src="/assets/brand/bit-foundry-logo.mp4" type="video/mp4">
+    </video>
+    <img class="hero-logo-still" src="/assets/brand/bit-foundry-logo-poster.jpg" alt="Bit Foundry Labs" width="440">
+    <div class="eyebrow reveal">California software company</div>
     <h1 class="reveal">Independent AI products. Clearer answers.</h1>
     <div class="lede">
       <p class="reveal">AI models can produce useful answers—and confident mistakes. Comparing outputs can make differences easier to see.</p>
@@ -343,7 +350,6 @@
   <div class="wrap">
     <div class="foot-grid">
       <div class="foot-col foot-brand">
-        <div class="brand"><span class="mark"></span>Bit Foundry Labs</div>
         <p class="foot-tag">Bit Foundry Labs is the product studio of Bit Foundry, the company behind Gangsta AI (personal) and Ask Consensus (professional).</p>
         <div class="foot-social">
           <a href="https://www.linkedin.com/company/gangsta-ai" target="_blank" rel="noopener" aria-label="Gangsta AI on LinkedIn">Gangsta AI <svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M17 7H9M17 7v8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
