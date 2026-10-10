@@ -160,6 +160,10 @@
   .ptag{font-size:13px;color:var(--dim);font-weight:500}
   .product h3{font-size:22px;margin-top:8px;letter-spacing:-.02em;font-weight:600}
   .product p{color:var(--muted);font-size:15px;line-height:1.6;margin-top:11px}
+  .product-ctas{display:flex;flex-wrap:wrap;align-items:center;gap:8px 18px;margin-top:20px}
+  .pcta{font-size:14px;font-weight:600;color:var(--accent);text-decoration:none;display:inline-flex;align-items:center;gap:4px}
+  .pcta.secondary{color:var(--muted);font-weight:500}
+  .pcta:hover{text-decoration:underline}
 
   /* founder */
   .founder{display:flex;gap:30px;align-items:flex-start;margin-top:44px;flex-wrap:wrap}
@@ -332,16 +336,25 @@
       <p class="lead">Explore our products, meet the team, and see the company behind them.</p>
     </div>
     <div class="products reveal">
-      <a class="product" href="/products/">
+      <div class="product">
         <div class="ptag">Professional · askconsensus.ai</div>
         <h3>Ask Consensus</h3>
-        <p>The professional answer engine teams and businesses rely on. Ask once and get a synthesized, cross-checked verdict with agreement and disagreement made visible. AI answers can still be wrong; verify important claims.</p>
-      </a>
-      <a class="product" href="/products/">
+        <p>The professional answer engine built for teams and businesses. Ask once and get a synthesized, cross-checked verdict with agreement and disagreement made visible. AI answers can still be wrong; verify important claims.</p>
+        <div class="product-ctas">
+          <a class="pcta" href="https://askconsensus.ai" target="_blank" rel="noopener">Open Ask Consensus →</a>
+          <a class="pcta secondary" href="/products/">How it works</a>
+        </div>
+      </div>
+      <div class="product">
         <div class="ptag">Personal · gangstaai.org</div>
         <h3>Gangsta AI</h3>
         <p>Your personal AI arena. Put 30+ leading models side by side on one prompt, then pick the answer that fits. Fast, visual, and made for exploring.</p>
-      </a>
+        <div class="product-ctas">
+          <a class="pcta" href="https://gangstaai.org" target="_blank" rel="noopener">Open Gangsta AI →</a>
+          <a class="pcta secondary" href="https://apps.apple.com/us/app/gangsta-ai-compare-ai-models/id6761397502" target="_blank" rel="noopener">App Store ↗</a>
+          <a class="pcta secondary" href="/products/">How it works</a>
+        </div>
+      </div>
     </div>
     <p class="lead reveal" style="margin-top:28px"><a class="textlink" href="/products/">See how they're different →</a></p>
   </div>
