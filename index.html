@@ -137,6 +137,20 @@
   /* content is visible by default; GSAP sets the hidden start state only when it loads */
   .reveal{opacity:1;transform:none}
   .gsap-ready .reveal{opacity:0;transform:translateY(22px)}
+
+  /* ===== THEME: AI ===== */
+
+  :root{--accent:#22e3c3;}
+  body{background:#05070d;}
+  body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.5;
+    background-image:linear-gradient(rgba(34,227,195,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(34,227,195,.06) 1px,transparent 1px);
+    background-size:44px 44px;mask-image:radial-gradient(70% 60% at 50% 30%,#000,transparent 85%);}
+  .hero h1{background:linear-gradient(90deg,#22e3c3,#7b8cff 60%,#c56bff);-webkit-background-clip:text;background-clip:text;color:transparent;}
+  .kicker{color:#22e3c3;text-shadow:0 0 18px rgba(34,227,195,.5)}
+  .avatar,.founder img{filter:saturate(1.05);box-shadow:0 0 0 1px rgba(34,227,195,.4),0 0 24px rgba(34,227,195,.25)}
+  .card:hover{border-color:rgba(34,227,195,.5);box-shadow:0 0 30px rgba(34,227,195,.12)}
+  .stat .n{background:linear-gradient(90deg,#22e3c3,#7b8cff);-webkit-background-clip:text;background-clip:text;color:transparent}
+
 </style>
 </head>
 <body>
@@ -247,7 +261,7 @@
         <h3>Niv Caviar</h3>
         <div class="role">Board Member</div>
         <p class="bio">Life sciences CEO, CFO &amp; CBO across biopharma, biotech, medtech and health services. CEO, ProPedix. Former CEO, Suneva Medical. Former VP of Marketing, Allergan. Harvard MBA.</p>
-        <a class="cardlink" href="https://www.propedix.com" target="_blank" rel="nofollow noopener">Visit <svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M17 7H9M17 7v8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <a class="cardlink" href="https://www.linkedin.com/in/niv-edward-caviar" target="_blank" rel="nofollow noopener">LinkedIn <svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M17 7H9M17 7v8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
       </article>
 
       <article class="card reveal">
@@ -255,15 +269,15 @@
         <h3>Isak Bosman</h3>
         <div class="role">Board Member</div>
         <p class="bio">Co-founder &amp; CTO, Indago Solutions. Chief AI Scientist, SensorOps. Former lecturer in AI and neural networks, UC Irvine.</p>
-        <a class="cardlink" href="https://www.indago.ai" target="_blank" rel="nofollow noopener">Visit <svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M17 7H9M17 7v8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <a class="cardlink" href="https://www.linkedin.com/in/isak-bosman" target="_blank" rel="nofollow noopener">LinkedIn <svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M17 7H9M17 7v8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
       </article>
 
       <article class="card reveal">
         <img class="avatar" src="assets/board/rob-stickler.jpg" alt="Rob Stickler" onerror="this.src='https://ui-avatars.com/api/?name=Rob+Stickler&size=256&background=161b28&color=cbd5f5&bold=true'">
         <h3>Rob Stickler</h3>
         <div class="role">Board Member</div>
-        <p class="bio">Agentic AI expert.</p>
-        <a class="cardlink" href="https://robstickler.com" target="_blank" rel="nofollow noopener">Visit <svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M17 7H9M17 7v8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <p class="bio">Agentic AI expert specializing in AI-driven marketing and data analysis. Builds autonomous systems for campaign optimization, audience insight, and decision support.</p>
+        <a class="cardlink" href="https://www.linkedin.com/in/rob-stickler-1466b931" target="_blank" rel="nofollow noopener">LinkedIn <svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M17 7H9M17 7v8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
       </article>
 
       <article class="card reveal">
@@ -279,7 +293,6 @@
         <h3>Jeremiah Jenkins</h3>
         <div class="role">Director of QA</div>
         <p class="bio">AI Trainer, DataAnnotation.tech.</p>
-        <a class="cardlink" href="https://www.linkedin.com/" target="_blank" rel="nofollow noopener">LinkedIn <svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M17 7H9M17 7v8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
       </article>
 
     </div>
