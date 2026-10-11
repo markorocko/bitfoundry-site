@@ -244,7 +244,7 @@ HOME = f'''
 <header class="hero">
   <div class="wrap">
     <div class="eyebrow reveal">Bit Foundry Labs · California software company</div>
-    <h1 class="reveal">Independent AI products. Clearer answers.</h1>
+    <h1 class="reveal"><span class="hl">Independent AI products.</span> <span class="hl">Clearer answers.</span></h1>
     <div class="lede">
       <p class="reveal">AI models can produce useful answers—and confident mistakes. Comparing outputs can make differences easier to see.</p>
       <p class="reveal"><strong>Bit Foundry Labs is the product studio of Bit Foundry, a California S corporation.</strong> We build tools that let people compare AI responses and inspect where models agree or disagree. Model agreement is not a guarantee that an answer is correct.</p>
@@ -278,11 +278,13 @@ HOME = f'''
     </div>
     <div class="products reveal">
       <a class="product" href="/products/">
+        <div class="pic pic-sm"><img src="/assets/brand/ask-consensus-icon.png" alt="Ask Consensus icon" width="48" height="48" loading="lazy"></div>
         <div class="ptag">askconsensus.ai</div>
         <h3>Ask Consensus</h3>
         <p>Ask a question and review a synthesized response alongside areas of agreement and disagreement. AI-generated answers can be incorrect; verify important claims.</p>
       </a>
       <a class="product" href="/products/">
+        <div class="pic pic-sm contain"><img src="/assets/brand/gai-brain.png" alt="Gangsta AI brain logo" width="48" height="48" loading="lazy"></div>
         <div class="ptag">gangstaai.org</div>
         <h3>Gangsta AI</h3>
         <p>Compare responses from leading AI models side by side from one prompt, then decide which answer best fits your task.</p>
@@ -354,6 +356,7 @@ PRODUCTS = f'''
 <section>
   <div class="wrap">
     <div class="reveal prod-head">
+      <div class="pic"><img src="/assets/brand/ask-consensus-icon.png" alt="Ask Consensus icon" width="72" height="72" loading="lazy"></div>
       <div class="kicker">askconsensus.ai</div>
       <h2>Ask Consensus</h2>
       <p class="lead">Ask one question and review a synthesized response with model agreement and disagreement made visible.</p>
@@ -375,6 +378,7 @@ PRODUCTS = f'''
 <section>
   <div class="wrap">
     <div class="reveal prod-head">
+      <div class="pic contain"><img src="/assets/brand/gai-brain.png" alt="Gangsta AI brain logo" width="72" height="72" loading="lazy"></div>
       <div class="kicker">gangstaai.org</div>
       <h2>Gangsta AI</h2>
       <p class="lead">The side-by-side arena. See 30+ models answer the same prompt — and pick your winner.</p>

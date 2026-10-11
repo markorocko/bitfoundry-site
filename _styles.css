@@ -9,6 +9,7 @@
     font:16px/1.65 Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
     -webkit-font-smoothing:antialiased;overflow-x:hidden;letter-spacing:-.011em}
   a{color:inherit;text-decoration:none}
+  html,body{overflow-x:hidden}
   .wrap{max-width:1040px;margin:0 auto;padding:0 28px}
   .muted{color:var(--muted)}
 
@@ -26,6 +27,13 @@
   header.hero{padding:140px 0 100px}
   .hero .eyebrow{font-size:13px;font-weight:500;color:var(--muted);margin-bottom:28px}
   .hero h1{font-size:clamp(34px,5.6vw,58px);line-height:1.08;letter-spacing:-.035em;font-weight:600;max-width:880px}
+  /* Each sentence stands on its own line — sharp, intentional breaks. */
+  .hero h1 .hl{display:block}
+  @media(max-width:600px){
+    /* Size so the longest sentence fits the padded container on one line. */
+    .hero h1{font-size:clamp(19px,5.9vw,28px);line-height:1.18;letter-spacing:-.02em}
+    .hero h1 .hl{white-space:nowrap}
+  }
   .hero .lede{margin-top:34px;max-width:680px;font-size:clamp(17px,2.2vw,20px);line-height:1.6;color:var(--muted)}
   .hero .lede strong{color:var(--text);font-weight:600}
   .hero .lede p+p{margin-top:20px}
@@ -34,7 +42,7 @@
   .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:28px;margin-top:64px;
     padding-top:40px;border-top:1px solid var(--line)}
   @media(max-width:700px){.stats{grid-template-columns:repeat(2,1fr);gap:28px 20px}}
-  .stat .n{font-size:clamp(26px,4vw,38px);font-weight:600;letter-spacing:-.03em}
+  .stat .n{font-size:clamp(22px,4vw,38px);font-weight:600;letter-spacing:-.03em;overflow-wrap:anywhere}
   .stat .l{color:var(--dim);font-size:13px;font-weight:500;margin-top:6px}
 
   /* sections */
@@ -78,6 +86,16 @@
   .ptag{font-size:13px;color:var(--dim);font-weight:500}
   .product h3{font-size:22px;margin-top:8px;letter-spacing:-.02em;font-weight:600}
   .product p{color:var(--muted);font-size:15px;line-height:1.6;margin-top:11px}
+
+  /* Product marks — framed app-icon tiles so a square wordmark and a round
+     brain read as one consistent set on the dark surface. */
+  .pic{width:64px;height:64px;border-radius:16px;border:1px solid var(--line);
+    background:var(--panel);display:flex;align-items:center;justify-content:center;
+    overflow:hidden;flex:none}
+  .pic img{width:100%;height:100%;object-fit:cover;display:block}
+  .pic.contain img{width:80%;height:80%;object-fit:contain}
+  .pic-sm{width:46px;height:46px;border-radius:12px;margin-bottom:16px}
+  .prod-head .pic{margin-bottom:20px}
 
   /* founder */
   .founder{display:flex;gap:30px;align-items:flex-start;margin-top:44px;flex-wrap:wrap}

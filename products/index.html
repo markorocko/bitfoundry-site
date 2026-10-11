@@ -26,7 +26,6 @@
 <meta name="theme-color" content="#05070d" />
 <link rel="icon" href="/favicon.ico" sizes="any" />
 <link rel="icon" type="image/png" href="/favicon.png" />
-<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -73,6 +72,7 @@
     font:16px/1.65 Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
     -webkit-font-smoothing:antialiased;overflow-x:hidden;letter-spacing:-.011em}
   a{color:inherit;text-decoration:none}
+  html,body{overflow-x:hidden}
   .wrap{max-width:1040px;margin:0 auto;padding:0 28px}
   .muted{color:var(--muted)}
 
@@ -81,30 +81,22 @@
     backdrop-filter:saturate(140%) blur(14px);border-bottom:1px solid var(--line)}
   nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
   .brand{font-weight:600;letter-spacing:-.02em;font-size:16px;display:flex;align-items:center;gap:9px}
-  .brand .mark{width:22px;height:22px;border-radius:0;background:url(/assets/brand/cube-mark.png) center/contain no-repeat}
+  .brand .mark{width:20px;height:20px;border-radius:6px;background:linear-gradient(135deg,var(--accent),#4b5bd6)}
   .navlinks a{color:var(--muted);font-size:14px;font-weight:500;margin-left:26px;transition:color .2s}
   .navlinks a:hover{color:var(--text)}
-  /* mobile hamburger (pure CSS, no JS) — portrait iPhone showed no menu before */
-  .navtoggle{display:none}
-  .hamburger{display:none}
-  @media(max-width:640px){
-    .hamburger{display:flex;flex-direction:column;justify-content:center;align-items:center;gap:5px;
-      width:40px;height:40px;cursor:pointer;border:1px solid var(--line);border-radius:8px;flex:0 0 auto}
-    .hamburger span{display:block;width:18px;height:2px;background:var(--text);border-radius:2px;transition:.2s}
-    .navtoggle:checked ~ .hamburger span:nth-child(1){transform:translateY(7px) rotate(45deg)}
-    .navtoggle:checked ~ .hamburger span:nth-child(2){opacity:0}
-    .navtoggle:checked ~ .hamburger span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
-    .navlinks{position:absolute;top:64px;left:0;right:0;flex-direction:column;
-      background:rgba(8,9,13,.97);backdrop-filter:saturate(140%) blur(14px);
-      border-bottom:1px solid var(--line);padding:4px 24px 14px;display:none}
-    .navlinks a{margin:0;padding:13px 2px;font-size:16px;border-top:1px solid var(--line)}
-    .navtoggle:checked ~ .navlinks{display:flex}
-  }
+  @media(max-width:640px){.navlinks{display:none}}
 
   /* hero — editorial mission statement, not a sales pitch */
   header.hero{padding:140px 0 100px}
   .hero .eyebrow{font-size:13px;font-weight:500;color:var(--muted);margin-bottom:28px}
   .hero h1{font-size:clamp(34px,5.6vw,58px);line-height:1.08;letter-spacing:-.035em;font-weight:600;max-width:880px}
+  /* Each sentence stands on its own line — sharp, intentional breaks. */
+  .hero h1 .hl{display:block}
+  @media(max-width:600px){
+    /* Size so the longest sentence fits the padded container on one line. */
+    .hero h1{font-size:clamp(19px,5.9vw,28px);line-height:1.18;letter-spacing:-.02em}
+    .hero h1 .hl{white-space:nowrap}
+  }
   .hero .lede{margin-top:34px;max-width:680px;font-size:clamp(17px,2.2vw,20px);line-height:1.6;color:var(--muted)}
   .hero .lede strong{color:var(--text);font-weight:600}
   .hero .lede p+p{margin-top:20px}
@@ -113,7 +105,7 @@
   .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:28px;margin-top:64px;
     padding-top:40px;border-top:1px solid var(--line)}
   @media(max-width:700px){.stats{grid-template-columns:repeat(2,1fr);gap:28px 20px}}
-  .stat .n{font-size:clamp(26px,4vw,38px);font-weight:600;letter-spacing:-.03em}
+  .stat .n{font-size:clamp(22px,4vw,38px);font-weight:600;letter-spacing:-.03em;overflow-wrap:anywhere}
   .stat .l{color:var(--dim);font-size:13px;font-weight:500;margin-top:6px}
 
   /* sections */
@@ -157,6 +149,16 @@
   .ptag{font-size:13px;color:var(--dim);font-weight:500}
   .product h3{font-size:22px;margin-top:8px;letter-spacing:-.02em;font-weight:600}
   .product p{color:var(--muted);font-size:15px;line-height:1.6;margin-top:11px}
+
+  /* Product marks — framed app-icon tiles so a square wordmark and a round
+     brain read as one consistent set on the dark surface. */
+  .pic{width:64px;height:64px;border-radius:16px;border:1px solid var(--line);
+    background:var(--panel);display:flex;align-items:center;justify-content:center;
+    overflow:hidden;flex:none}
+  .pic img{width:100%;height:100%;object-fit:cover;display:block}
+  .pic.contain img{width:80%;height:80%;object-fit:contain}
+  .pic-sm{width:46px;height:46px;border-radius:12px;margin-bottom:16px}
+  .prod-head .pic{margin-bottom:20px}
 
   /* founder */
   .founder{display:flex;gap:30px;align-items:flex-start;margin-top:44px;flex-wrap:wrap}
@@ -278,8 +280,6 @@
 <nav>
   <div class="wrap">
     <a class="brand" href="/"><span class="mark"></span>Bit Foundry Labs</a>
-    <input type="checkbox" id="navtoggle" class="navtoggle" aria-label="Toggle menu">
-    <label for="navtoggle" class="hamburger" role="button" aria-label="Menu"><span></span><span></span><span></span></label>
     <div class="navlinks">
       <a href="/about/">About</a>
       <a href="/products/" class="active">Products</a>
@@ -302,9 +302,10 @@
 <section>
   <div class="wrap">
     <div class="reveal prod-head">
-      <div class="kicker">Professional · askconsensus.ai</div>
+      <div class="pic"><img src="/assets/brand/ask-consensus-icon.png" alt="Ask Consensus icon" width="72" height="72" loading="lazy"></div>
+      <div class="kicker">askconsensus.ai</div>
       <h2>Ask Consensus</h2>
-      <p class="lead">The professional answer engine, built for professionals &amp; teams. Ask one question and get a synthesized, cross-checked verdict with model agreement and disagreement made visible.</p>
+      <p class="lead">Ask one question and review a synthesized response with model agreement and disagreement made visible.</p>
       <a class="btn" href="https://askconsensus.ai" target="_blank" rel="noopener">Visit Ask Consensus →</a>
     </div>
     <div class="prose reveal">
@@ -316,41 +317,17 @@
       <div class="feat"><h4>You get a verdict</h4><p>Ask Consensus reconciles them into one sourced, confidence-rated answer.</p></div>
       <div class="feat"><h4>See the agreement</h4><p>Know when the models are unanimous — and when they split.</p></div>
     </div>
-    <p class="prose reveal"><strong>Who it's for:</strong> professionals, teams, and companies that need a dependable, defensible answer — not a coin flip from a single model.</p>
-    <div class="shots-wrap reveal">
-      <div class="shots-head">See it in action</div>
-      <p class="shots-sub">One question → the top models answer → one adjudicated verdict.</p>
-      <div class="shots">
-        <figure class="shot">
-          <img src="/assets/screens/ac-ask.jpg" alt="Ask Consensus sends one question to GPT-6, Gemini, Claude and Grok" loading="lazy">
-          <figcaption>Ask once — the top models answer in parallel.</figcaption>
-        </figure>
-        <figure class="shot">
-          <img src="/assets/screens/ac-verdict.jpg" alt="The Adjudicator returns one cross-checked verdict in Ask Consensus" loading="lazy">
-          <figcaption>The Adjudicator returns one cross-checked verdict.</figcaption>
-        </figure>
-      </div>
-      <p class="shots-note">Real screenshots from Ask Consensus.</p>
-    </div>
+    <p class="prose reveal"><strong>Who it's for:</strong> researchers, builders, students, and professionals who need a dependable answer, not a coin flip from a single model.</p>
   </div>
-  <style>
-    .shots-wrap{margin-top:40px}
-    .shots-head{font-size:13px;font-weight:600;color:var(--accent);letter-spacing:.02em}
-    .shots-sub{color:var(--muted);font-size:16px;margin:6px 0 22px}
-    .shots{display:flex;flex-wrap:wrap;gap:24px}
-    .shot{margin:0;flex:1 1 230px;max-width:300px}
-    .shot img{width:100%;height:auto;border-radius:20px;border:1px solid var(--line);box-shadow:0 18px 50px rgba(0,0,0,.5);display:block;background:#000}
-    .shot figcaption{color:var(--muted);font-size:13px;margin-top:11px;line-height:1.5}
-    .shots-note{color:var(--dim);font-size:12px;margin-top:18px}
-  </style>
 </section>
 
 <section>
   <div class="wrap">
     <div class="reveal prod-head">
-      <div class="kicker">Personal · gangstaai.org</div>
+      <div class="pic contain"><img src="/assets/brand/gai-brain.png" alt="Gangsta AI brain logo" width="72" height="72" loading="lazy"></div>
+      <div class="kicker">gangstaai.org</div>
       <h2>Gangsta AI</h2>
-      <p class="lead">Your personal AI arena. See 30+ models answer the same prompt — and pick your winner.</p>
+      <p class="lead">The side-by-side arena. See 30+ models answer the same prompt — and pick your winner.</p>
       <div class="cta-row">
         <a class="btn" href="https://gangstaai.org" target="_blank" rel="noopener">Visit Gangsta AI →</a>
         <a class="appstore" href="https://apps.apple.com/us/app/gangsta-ai-compare-ai-models/id6761397502" target="_blank" rel="noopener" aria-label="Download Gangsta AI on the App Store">
@@ -368,7 +345,7 @@
       <div class="feat"><h4>Pick the winner</h4><p>Choose the best answer for your task — no vendor lock-in.</p></div>
       <div class="feat"><h4>Beyond text</h4><p>Image and music generation models in the same arena.</p></div>
     </div>
-    <p class="prose reveal"><strong>Who it's for:</strong> individuals, creators, and the AI-curious who want to explore, compare, and find the right model fast.</p>
+    <p class="prose reveal"><strong>Who it's for:</strong> builders, creators, and the AI-curious who want to explore, compare, and find the right model fast.</p>
   </div>
 </section>
 
@@ -380,21 +357,21 @@
     </div>
     <div class="compare reveal">
       <div class="compare-col">
-        <div class="ptag">Ask Consensus — Professional</div>
+        <div class="ptag">Ask Consensus</div>
         <ul>
-          <li><strong>The professional version</strong>, built for professionals &amp; teams</li>
           <li>Ask once → <strong>one cross-checked verdict</strong></li>
-          <li>Built for <strong>business-grade decisions &amp; research</strong></li>
+          <li>Built for <strong>decisions and research</strong></li>
           <li>Sourced, confidence-rated answer</li>
+          <li>Clean, professional, focused</li>
         </ul>
       </div>
       <div class="compare-col">
-        <div class="ptag">Gangsta AI — Personal</div>
+        <div class="ptag">Gangsta AI</div>
         <ul>
-          <li><strong>The personal version</strong> for everyday exploring</li>
           <li>Ask once → <strong>30+ answers side by side</strong></li>
-          <li>Built for <strong>comparison and discovery</strong></li>
-          <li>You pick the best response — fast, visual, playful</li>
+          <li>Built for <strong>comparison and exploration</strong></li>
+          <li>You pick the best response</li>
+          <li>Fast, visual, playful</li>
         </ul>
       </div>
     </div>
@@ -406,7 +383,8 @@
   <div class="wrap">
     <div class="foot-grid">
       <div class="foot-col foot-brand">
-        <p class="foot-tag">Bit Foundry Labs is the product studio of Bit Foundry, the company behind Gangsta AI (personal) and Ask Consensus (professional).</p>
+        <div class="brand"><span class="mark"></span>Bit Foundry Labs</div>
+        <p class="foot-tag">Bit Foundry Labs is the product studio of Bit Foundry, the company behind Gangsta AI and Ask Consensus.</p>
         <div class="foot-social">
           <a href="https://www.linkedin.com/company/gangsta-ai" target="_blank" rel="noopener" aria-label="Gangsta AI on LinkedIn">Gangsta AI <svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M17 7H9M17 7v8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
           <a href="https://www.linkedin.com/company/askconsensus" target="_blank" rel="noopener" aria-label="Ask Consensus on LinkedIn">Ask Consensus <svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M17 7H9M17 7v8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
@@ -436,7 +414,8 @@
       <a href="/privacy/">Privacy Policy</a>
       <span class="sep">|</span>
       <a href="/terms/">Terms of Use</a>
-
+      <span class="sep">|</span>
+      <span class="duns">D-U-N-S 06-845-0007</span>
     </div>
   </div>
 </footer>
