@@ -197,7 +197,7 @@ BOARD = [
     ("gregg-cunningham", "Gregg Cunningham", "Board Member", "",
      "Attorney. Former two-term Member, Pennsylvania House of Representatives. Founder &amp; Executive Director, Center for Bio-Ethical Reform. Vietnam veteran and retired Air Force Reserve colonel, with roughly a decade in military intelligence.",
      [("Visit", "https://www.abortionno.org"), ("LinkedIn", "https://www.linkedin.com/in/gregg-cunningham-2a916b23")]),
-    ("niv-caviar", "Niv Caviar", "Board Member", "shift-right",
+    ("niv-caviar", "Niv Caviar", "Advisory Board", "shift-right",
      "Life sciences CEO, CFO &amp; CBO across biopharma, biotech, medtech and health services. CEO, ProPedix. Former CEO, Suneva Medical. Former VP of Marketing, Allergan. Harvard MBA.",
      [("LinkedIn", "https://www.linkedin.com/in/niv-edward-caviar")]),
     ("isak-bosman", "Isak Bosman", "Board Member", "shift-right",
