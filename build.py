@@ -357,7 +357,7 @@ PRODUCTS = f'''
 <section>
   <div class="wrap">
     <div class="reveal prod-head">
-      <div class="pic"><img src="/assets/brand/ask-consensus-icon.png" alt="Ask Consensus icon" width="72" height="72" loading="lazy"></div>
+      <img class="prod-logo" src="/assets/brand/ask-consensus-wordmark.jpg" alt="Ask Consensus" width="868" height="350" loading="lazy">
       <div class="kicker">askconsensus.ai</div>
       <h2>Ask Consensus</h2>
       <p class="lead">Ask one question and review a synthesized response with model agreement and disagreement made visible.</p>
