@@ -206,7 +206,7 @@ BOARD = [
     ("rob-stickler", "Rob Stickler", "Board Member", "",
      "Agentic AI expert specializing in AI-driven marketing and data analysis. Builds autonomous systems for campaign optimization, audience insight, and decision support.",
      [("LinkedIn", "https://www.linkedin.com/in/rob-stickler-1466b931")]),
-    ("jeannine-kofford", "Jeannine Kofford, MD", "Investor", "",
+    ("jeannine-kofford", "Jeannine Kofford, MD", "Strategic Investor", "",
      "Physician. Founder &amp; Medical Director, Riviera Laser Studios, Dana Point. National trainer in nonsurgical aesthetics.",
      [("Visit", "https://rivieralaserstudio.net")]),
     ("jeremiah-jenkins", "Jeremiah Jenkins", "Director of QA", "shift-left",
