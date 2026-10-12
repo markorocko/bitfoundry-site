@@ -215,6 +215,7 @@ BOARD = [
 
 def board_card(slug, name, role, shift, bio, links):
     cls = ("avatar " + shift).strip()
+    bio = bio.replace(", ", ",<br>")   # line break after each comma in the credentials (Mark)
     name_q = name.replace(",", "").replace(" ", "+")
     fallback = f"https://ui-avatars.com/api/?name={name_q}&size=256&background=161b28&color=cbd5f5&bold=true"
     if len(links) >= 2:
