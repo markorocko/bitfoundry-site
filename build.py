@@ -281,13 +281,13 @@ HOME = f'''
     <div class="products reveal">
       <a class="product" href="/products/">
         <img class="prod-logo" src="/assets/brand/ask-consensus-crest-dark.png" alt="Ask Consensus" width="640" height="148" loading="lazy">
-        <div class="ptag">askconsensus.ai</div>
+        <div class="ptag">AskConsensus.ai</div>
         <h3>Ask Consensus</h3>
         <p>Ask a question and review a synthesized response alongside areas of agreement and disagreement. AI-generated answers can be incorrect; verify important claims.</p>
       </a>
       <a class="product" href="/products/">
         <div class="pic pic-sm contain"><img src="/assets/brand/gai-brain.png" alt="Gangsta AI brain logo" width="48" height="48" loading="lazy"></div>
-        <div class="ptag">gangstaai.org</div>
+        <div class="ptag">GangstaAI.org</div>
         <h3>Gangsta AI</h3>
         <p>Compare responses from leading AI models side by side from one prompt, then decide which answer best fits your task.</p>
       </a>
@@ -360,7 +360,7 @@ PRODUCTS = f'''
   <div class="wrap">
     <div class="reveal prod-head">
       <img class="prod-logo" src="/assets/brand/ask-consensus-crest-dark.png" alt="Ask Consensus" width="640" height="148" loading="lazy">
-      <div class="kicker">askconsensus.ai</div>
+      <div class="kicker">AskConsensus.ai</div>
       <h2>Ask Consensus</h2>
       <p class="lead">Ask one question and review a synthesized response with model agreement and disagreement made visible.</p>
       <a class="btn" href="https://askconsensus.ai" target="_blank" rel="noopener">Visit Ask Consensus →</a>
@@ -382,7 +382,7 @@ PRODUCTS = f'''
   <div class="wrap">
     <div class="reveal prod-head">
       <div class="pic contain"><img src="/assets/brand/gai-brain.png" alt="Gangsta AI brain logo" width="72" height="72" loading="lazy"></div>
-      <div class="kicker">gangstaai.org</div>
+      <div class="kicker">GangstaAI.org</div>
       <h2>Gangsta AI</h2>
       <p class="lead">The side-by-side arena. See 30+ models answer the same prompt — and pick your winner.</p>
       <div class="cta-row">
@@ -506,7 +506,7 @@ CONTACT = f'''
 def legal_page(kind):
     if kind == "privacy":
         heading = "Privacy Policy"
-        intro = "Bit Foundry operates Gangsta AI (gangstaai.org) and Ask Consensus (askconsensus.ai). This policy explains what we collect, how we use it, and your rights."
+        intro = "Bit Foundry operates Gangsta AI (GangstaAI.org) and Ask Consensus (AskConsensus.ai). This policy explains what we collect, how we use it, and your rights."
         sections = [
             ("Who we are", "Bit Foundry, a California S corporation (D-U-N-S 06-845-0007), operates Gangsta AI and Ask Consensus. Contact: " + EMAIL + "."),
             ("Information we collect", "Account details you provide (such as email and sign-in method); your queries and the content you submit; usage data (features used, subscription tier, free-tier usage counts); device and session information; and payment status (card details are handled by our payment processor, not stored by us)."),
