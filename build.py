@@ -195,7 +195,7 @@ def write(path, html):
 # ---- board data ------------------------------------------------------------
 BOARD = [
     ("gregg-cunningham", "Gregg Cunningham", "Board Member", "",
-     "Attorney. Former two-term Member, Pennsylvania House of Representatives. Founder &amp; Executive Director, Center for Bio-Ethical Reform. Vietnam veteran and retired Air Force Reserve colonel, with roughly a decade in military intelligence.",
+     "Attorney. Former two-term Member,<br>Pennsylvania House of Representatives. Founder &amp; Executive Director, Center for Bio-Ethical Reform. Vietnam veteran and retired Air Force Reserve colonel, with roughly a decade in military intelligence.",
      [("Visit", "https://www.abortionno.org"), ("LinkedIn", "https://www.linkedin.com/in/gregg-cunningham-2a916b23")]),
     ("niv-caviar", "Niv Caviar", "Advisory Board", "shift-right",
      "Life sciences CEO, CFO &amp; CBO across biopharma, biotech, medtech and health services. CEO, ProPedix. Former CEO, Suneva Medical. Former VP of Marketing, Allergan. Harvard MBA.",
@@ -266,6 +266,7 @@ HOME = f'''
       <div class="kicker">Our thesis</div>
       <h2>Compare answers. See where they differ.</h2>
       <p class="lead">Multiple model responses can reveal useful differences, but consensus can still be wrong. Our products are designed to help people inspect AI outputs and make their own judgments.</p>
+      <p class="lead" style="margin-top:18px"><a href="https://askconsensus.ai/proof" target="_blank" rel="noopener" style="color:var(--text);opacity:.75;text-decoration:underline;text-underline-offset:4px">See the proof →</a></p>
     </div>
   </div>
 </section>
@@ -279,7 +280,7 @@ HOME = f'''
     </div>
     <div class="products reveal">
       <a class="product" href="/products/">
-        <div class="pic pic-sm"><img src="/assets/brand/ask-consensus-icon.png" alt="Ask Consensus icon" width="48" height="48" loading="lazy"></div>
+        <img class="prod-logo" src="/assets/brand/ask-consensus-crest-dark.png" alt="Ask Consensus" width="640" height="148" loading="lazy">
         <div class="ptag">askconsensus.ai</div>
         <h3>Ask Consensus</h3>
         <p>Ask a question and review a synthesized response alongside areas of agreement and disagreement. AI-generated answers can be incorrect; verify important claims.</p>
@@ -313,6 +314,7 @@ ABOUT = f'''
       <div class="kicker">Our thesis</div>
       <h2>Compare answers. See where they differ.</h2>
       <p class="lead">Multiple model responses can reveal useful differences, but consensus can still be wrong. Our products help people inspect AI outputs and make their own judgments.</p>
+      <p class="lead" style="margin-top:18px"><a href="https://askconsensus.ai/proof" target="_blank" rel="noopener" style="color:var(--text);opacity:.75;text-decoration:underline;text-underline-offset:4px">See the proof →</a></p>
     </div>
   </div>
 </section>
@@ -357,7 +359,7 @@ PRODUCTS = f'''
 <section>
   <div class="wrap">
     <div class="reveal prod-head">
-      <img class="prod-logo" src="/assets/brand/ask-consensus-wordmark.jpg" alt="Ask Consensus" width="868" height="350" loading="lazy">
+      <img class="prod-logo" src="/assets/brand/ask-consensus-crest-dark.png" alt="Ask Consensus" width="640" height="148" loading="lazy">
       <div class="kicker">askconsensus.ai</div>
       <h2>Ask Consensus</h2>
       <p class="lead">Ask one question and review a synthesized response with model agreement and disagreement made visible.</p>
