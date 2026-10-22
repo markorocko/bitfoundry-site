@@ -125,8 +125,16 @@
   .duns{font-variant-numeric:tabular-nums}
 
   /* company / registration */
+  /* Registered business — three stacked rows, not one 3-up grid:
+       parent (full width) → the two products as EQUAL columns → D-U-N-S.
+     Each row is its own .reginfo so the product cards are forced to the same
+     width and weight; the old single grid made one product a sub-line of the
+     other. */
   .reginfo{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:28px}
-  @media(max-width:700px){.reginfo{grid-template-columns:1fr}}
+  .reg-parent,.reg-duns{grid-template-columns:1fr}
+  .reg-products{grid-template-columns:1fr 1fr}
+  .reg-products,.reg-duns{margin-top:20px}
+  @media(max-width:700px){.reginfo,.reg-products{grid-template-columns:1fr}}
   .regitem{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:22px}
   .reglabel{font-size:12px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--dim)}
   .regvalue{font-size:17px;font-weight:600;letter-spacing:-.01em;margin-top:12px;color:var(--text)}

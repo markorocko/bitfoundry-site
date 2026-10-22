@@ -188,8 +188,16 @@
   .duns{font-variant-numeric:tabular-nums}
 
   /* company / registration */
+  /* Registered business — three stacked rows, not one 3-up grid:
+       parent (full width) → the two products as EQUAL columns → D-U-N-S.
+     Each row is its own .reginfo so the product cards are forced to the same
+     width and weight; the old single grid made one product a sub-line of the
+     other. */
   .reginfo{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:28px}
-  @media(max-width:700px){.reginfo{grid-template-columns:1fr}}
+  .reg-parent,.reg-duns{grid-template-columns:1fr}
+  .reg-products{grid-template-columns:1fr 1fr}
+  .reg-products,.reg-duns{margin-top:20px}
+  @media(max-width:700px){.reginfo,.reg-products{grid-template-columns:1fr}}
   .regitem{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:22px}
   .reglabel{font-size:12px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--dim)}
   .regvalue{font-size:17px;font-weight:600;letter-spacing:-.01em;margin-top:12px;color:var(--text)}
@@ -308,17 +316,32 @@
     <div class="reveal">
       <div class="kicker">Company</div>
       <h2>Registered business</h2>
-      <div class="reginfo">
+      <!-- Parent above, the two products as EQUALS below it, D-U-N-S last.
+           The old 3-up grid put both products in one card, which made Gangsta AI
+           the bold value and Ask Consensus a grey sub-line underneath it — a
+           hierarchy we do not mean. They are siblings, so they get identical
+           cards side by side (Ask Consensus first, per the Consensus-first
+           house order). -->
+      <div class="reginfo reg-parent">
         <div class="regitem">
           <div class="reglabel">Legal entity</div>
           <div class="regvalue">Bit Foundry</div>
-          <div class="regsub">California S-corporation</div>
+          <div class="regsub">California S-corporation · parent company</div>
+        </div>
+      </div>
+      <div class="reginfo reg-products">
+        <div class="regitem">
+          <div class="reglabel">Product</div>
+          <div class="regvalue">Ask Consensus</div>
+          <div class="regsub">AskConsensus.ai</div>
         </div>
         <div class="regitem">
-          <div class="reglabel">Products</div>
+          <div class="reglabel">Product</div>
           <div class="regvalue">Gangsta AI</div>
-          <div class="regsub">Ask Consensus</div>
+          <div class="regsub">GangstaAI.org</div>
         </div>
+      </div>
+      <div class="reginfo reg-duns">
         <div class="regitem">
           <div class="reglabel">D-U-N-S number</div>
           <div class="regvalue duns">06-845-0007</div>

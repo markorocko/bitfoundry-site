@@ -453,17 +453,32 @@ COMPANY = f'''
     <div class="reveal">
       <div class="kicker">Company</div>
       <h2>Registered business</h2>
-      <div class="reginfo">
+      <!-- Parent above, the two products as EQUALS below it, D-U-N-S last.
+           The old 3-up grid put both products in one card, which made Gangsta AI
+           the bold value and Ask Consensus a grey sub-line underneath it — a
+           hierarchy we do not mean. They are siblings, so they get identical
+           cards side by side (Ask Consensus first, per the Consensus-first
+           house order). -->
+      <div class="reginfo reg-parent">
         <div class="regitem">
           <div class="reglabel">Legal entity</div>
           <div class="regvalue">Bit Foundry</div>
-          <div class="regsub">California S-corporation</div>
+          <div class="regsub">California S-corporation · parent company</div>
+        </div>
+      </div>
+      <div class="reginfo reg-products">
+        <div class="regitem">
+          <div class="reglabel">Product</div>
+          <div class="regvalue">Ask Consensus</div>
+          <div class="regsub">AskConsensus.ai</div>
         </div>
         <div class="regitem">
-          <div class="reglabel">Products</div>
+          <div class="reglabel">Product</div>
           <div class="regvalue">Gangsta AI</div>
-          <div class="regsub">Ask Consensus</div>
+          <div class="regsub">GangstaAI.org</div>
         </div>
+      </div>
+      <div class="reginfo reg-duns">
         <div class="regitem">
           <div class="reglabel">D-U-N-S number</div>
           <div class="regvalue duns">06-845-0007</div>
