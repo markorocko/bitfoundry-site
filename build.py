@@ -464,6 +464,7 @@ COMPANY = f'''
           <div class="reglabel">Legal entity</div>
           <div class="regvalue">Bit Foundry</div>
           <div class="regsub">California S-corporation · parent company</div>
+          <div class="regsub">Aliso Viejo, California, USA</div>
         </div>
       </div>
       <div class="reginfo reg-products">
@@ -509,6 +510,9 @@ CONTACT = f'''
       <div class="contactrow">
         <a class="mail" href="mailto:{EMAIL}">{EMAIL}</a>
       </div>
+      <!-- City-level only, matching the D&B city (Mark 2026-09-30). The street
+           address stays on the D&B record for verification and is never published. -->
+      <p class="lead" style="margin-top:14px">Bit Foundry · Aliso Viejo, California, USA</p>
       <p class="lead" style="margin-top:14px">Find our products on LinkedIn:
         <a class="textlink" href="https://www.linkedin.com/company/gangsta-ai" target="_blank" rel="noopener">Gangsta AI</a> ·
         <a class="textlink" href="https://www.linkedin.com/company/askconsensus" target="_blank" rel="noopener">Ask Consensus</a>
